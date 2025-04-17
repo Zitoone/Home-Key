@@ -145,6 +145,9 @@ transition: all 0.2s ease;
 #accomodations h1{
     padding: 25px;
 }
+#accomodations h4{
+    margin-top: 10px;
+}
 #leftside{
     flex: 2;
     background-color: var(--lightgrey);
@@ -176,7 +179,7 @@ transition: all 0.2s ease;
 #accomodations .accomodations-list{
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 20px;
     padding: 0 25px;
 }
 #accomodations div>a{
@@ -204,7 +207,7 @@ aside{
     padding: 0 25px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 15px;
 }
 aside article{
     display: flex;
@@ -241,19 +244,21 @@ aside article{
     gap: 20px;
     justify-self: center;
     padding: 40px;
-    justify-items: center;
+}
+#activities a{
+        flex:1 0 25%;
 }
 #activities article{
+
     justify-items: center;    
     background-color: var(--white);
     border: 1px solid var(--lightgrey);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     overflow: hidden;
+    cursor: pointer;
 }
 #activities img{
-    width: 100%;
     height: 380px;
     object-fit: cover;
     border-top-left-radius: 10px;
@@ -283,7 +288,7 @@ footer ul{
 footer article{
     background-color: var(--grey);
     display: flex;
-    gap: 300px;
+    justify-content: space-between;
     padding: 40px;
     border-radius: 10px 10px 0 0;
 }
