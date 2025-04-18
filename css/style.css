@@ -68,7 +68,6 @@ header ul{
     gap: 100px;
 }
 header nav li{
-
     padding-top: 30px;
     border-top: 1px solid transparent; 
 }
@@ -138,7 +137,6 @@ transition: all 0.2s ease;
 }
 /* Section 2 accomodations */
 #accomodations{
-    margin: 0;
     display: flex;
     gap: 40px;
 }
@@ -241,15 +239,14 @@ aside article{
 
 #activities > div{
     display: flex;
-    gap: 20px;
-    justify-self: center;
-    padding: 40px;
+    gap: 25px;
+    /* justify-self: center; */
+    /* padding: 40px; */
 }
 #activities a{
-        flex:1 0 25%;
+        flex:1;
 }
 #activities article{
-
     justify-items: center;    
     background-color: var(--white);
     border: 1px solid var(--lightgrey);
@@ -267,12 +264,13 @@ aside article{
 #activities h3{
     padding: 20px;
 }
+#activities a:hover{
+    color: #000;
+}
 #accomodations img:hover,
 #activities img:hover {
     filter:grayscale(0.8);
-    scale:1.1;
-
-    
+    scale:1.1;  
 }
 /* Footer */
 footer{
@@ -296,12 +294,57 @@ footer p {
     text-align: center;
     padding: 20px;
 }
-/* Responsive */
+/* Responsive tablette */
 @media screen and (max-width:1024px){
 #accomodations{
     flex-direction: column;
 }
-#activities article{
-    flex: 1 0 45%;
+#activities div{
+    flex-direction: row;
+    flex-flow: row wrap;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#activities{
+    margin: auto;
+}
+#activities a{
+    flex: 0 0 calc(50% - 13px);
 }
 }
+/* Responsive phone */
+@media screen and (max-width:767px){
+header{
+    flex-direction: column;
+}
+header ul{
+        gap: 10px;
+}
+header nav a:hover{
+    border-top: none;
+    padding-bottom: 10px;
+    border-bottom: 1px solid red;  
+    }
+.desktop{
+    display: none;
+}
+.hidden{
+    display: block;
+}
+#search > p:nth-child(5){
+    padding: 0;
+    margin-bottom: 50px;
+}
+#accomodations{
+    flex-flow: column-reverse;
+}
+#accomodations > aside > div > article > div {
+    padding-left: 10px;
+}
+#activities div {
+    flex-direction: column;
+}
+footer article {
+    flex-direction: column;
+    gap: 30px;
+}}
