@@ -13,18 +13,11 @@
     scroll-behavior: smooth;
     font-family: "open sans";
 }
-h1{
+h1, h2{
     font-size: 22px;
-    padding-top: 50px;
-}
-h2{
-    font-size: 18px;
+    padding:25px;
 }
 h3{
-    font-size: 16px;
-    font-weight: 700;
-}
-h4{
     font-weight: 700;
 }
 a{
@@ -57,10 +50,10 @@ i{
 header{
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 header img{
     width: 180px;
+    margin: 15px 0;
 }
 header ul{
     list-style: none;
@@ -126,7 +119,6 @@ transition: all 0.2s ease;
 }
 #search > p:nth-child(5){
     padding: 30px 0;
-    /* font-size: 18px; */
 }
 #filters a:hover{
     background-color: var(--red);
@@ -135,15 +127,16 @@ transition: all 0.2s ease;
     color: var(--white);
 }
 }
+#filters p{
+    font-size: 18px;
+    font-weight: 700;
+}
 /* Section 2 accomodations */
 #accomodations{
     display: flex;
     gap: 40px;
 }
-#accomodations h1{
-    padding: 25px;
-}
-#accomodations h4{
+#accomodations h3{
     margin-top: 10px;
 }
 #leftside{
@@ -205,11 +198,17 @@ aside{
     padding: 0 25px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 18px;
 }
 aside article{
     display: flex;
     position: relative;
+}
+aside a{
+    display: flex;
+    &:hover{
+        color: #000;
+    }
 }
 #accomodations aside div img{
     width: 90px;
@@ -218,7 +217,7 @@ aside article{
     border-radius: 10px 0 0 10px;
 
 }
-#accomodations > aside > div > article > div{
+#accomodations > aside > div > article > a > div{
     display: flex;
     flex-direction: column;
     justify-content: space-between ;
@@ -240,8 +239,7 @@ aside article{
 #activities > div{
     display: flex;
     gap: 25px;
-    /* justify-self: center; */
-    /* padding: 40px; */
+    margin-bottom: 30px;
 }
 #activities a{
         flex:1;
@@ -270,25 +268,29 @@ aside article{
 #accomodations img:hover,
 #activities img:hover {
     filter:grayscale(0.8);
-    scale:1.1;  
+    scale:1.01;  
+    transition: all 0.2s ease;
 }
 /* Footer */
 footer{
     margin: auto;
 }
 footer h2{
-    padding-bottom: 20px;
+    padding: 20px 0;
 }
 footer ul{
     list-style: none;
     padding: 0;
 }
-footer article{
-    background-color: var(--grey);
+footer div{
+    background-color: var(--lightgrey);
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding: 40px;
     border-radius: 10px 10px 0 0;
+}
+footer article{
+    flex: 1;
 }
 footer p {
     text-align: center;
@@ -298,6 +300,7 @@ footer p {
 @media screen and (max-width:1024px){
 #accomodations{
     flex-direction: column;
+    padding-bottom: 50px;
 }
 #activities div{
     flex-direction: row;
@@ -309,7 +312,7 @@ footer p {
     margin: auto;
 }
 #activities a{
-    flex: 0 0 calc(50% - 13px);
+    flex: 1 0 40%;
 }
 }
 /* Responsive phone */
@@ -317,20 +320,31 @@ footer p {
 header{
     flex-direction: column;
 }
-header ul{
-        gap: 10px;
+header a{
+    align-self: center;
 }
-header nav a:hover{
+header ul{
+        gap: 40px;
+}
+header nav a{
+    padding: 0;
+    &:hover{
     border-top: none;
     padding-bottom: 10px;
     border-bottom: 1px solid red;  
-    }
+    }}
 .desktop{
     display: none;
 }
 .hidden{
     display: block;
 }
+#search #filters{
+    gap: 10px;
+}
+#filters a{
+    flex: 1;
+} 
 #search > p:nth-child(5){
     padding: 0;
     margin-bottom: 50px;
@@ -341,10 +355,19 @@ header nav a:hover{
 #accomodations > aside > div > article > div {
     padding-left: 10px;
 }
+#accomodations > aside > div > article > a > div {
+    padding-left: 10px;
+}
+#accomodations > aside > div {
+    padding: 0 15px;
+}
 #activities div {
     flex-direction: column;
 }
-footer article {
+#activities a {
+    flex: 1 0 50%;
+}
+footer div {
     flex-direction: column;
     gap: 30px;
 }}
